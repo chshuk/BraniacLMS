@@ -3,10 +3,34 @@
 from django.db import migrations
 
 
+def forwards_func(apps, schema_editor):
+    # Get model
+    Courses = apps.get_model("mainapp", "Courses")
+    # Create model's objects
+    Courses.objects.create(
+        name="Новый курс по тайм-менеджменту",
+        description="Мы научим тебя все успевать вовремя и быть в ресурсе.",
+    )
+
+    Courses.objects.create(
+        name="Повар-кондитер",
+        description="Для тех кто всегда мечтал готовить вкусняшки.",
+    )
+
+
+def reverse_func(apps, schema_editor):
+    # Get model
+    Courses = apps.get_model("mainapp", "Courses")
+    # Delete objects
+    Courses.objects.all().delete()
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
         ("mainapp", "0002_data_migration"),
     ]
 
-    operations = []
+    operations = [
+        migrations.RunPython(forwards_func, reverse_func),
+    ]

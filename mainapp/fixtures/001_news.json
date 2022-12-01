@@ -70,5 +70,17 @@
         "created": "2021-07-02T18:32:47.331Z",
         "updated": "2021-07-02T18:32:47.331Z"
       }
+    },
+    {
+      "model": "mainapp.news",
+      "pk": 7,
+      "fields": {
+        "title": "My new News",
+        "preambule": "Все говорят 'бла-бла-бла'.",
+        "body": "5 компьютеров.",
+        "body_as_markdown": false,
+        "created": "2021-07-05T18:32:47.331Z",
+        "updated": "2022-07-05T18:32:47.331Z"
+      }
     }
   ]

@@ -81,6 +81,11 @@ def forwards_func(apps, schema_editor):
             по 10-балльной шкале, где один балл означал «ужасающий», а 10 \
             баллов – «отвратительный».",
     )
+    News.objects.create(
+        title="My new News",
+        preambule="И опять, и снова.",
+        body="Happy new year!!!",
+    )
 
 
 def reverse_func(apps, schema_editor):
