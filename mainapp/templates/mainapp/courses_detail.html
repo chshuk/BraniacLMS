@@ -103,7 +103,7 @@
   {% include 'mainapp/includes/feedback_card.html' %}
   {% endfor %}
   {% else %}
-  <p>
+  <p id="feedbackBeFirst">
     No feedback yet. Be first!
   </p>
   {% endif %}
@@ -138,6 +138,7 @@
     $("#feedbackSubmit").click(function () {
 
       $("#cardForm").hide();
+      $("#feedbackBeFirst").hide();
 
       var $form = $("#feedbackForm");
       $.ajax({
