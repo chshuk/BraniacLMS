@@ -1,5 +1,3 @@
-from decimal import Decimal
-
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -38,7 +36,7 @@ class Courses(models.Model):
     name = models.CharField(max_length=256, verbose_name="Name")
     description = models.TextField(verbose_name="Description", blank=True, null=True)
     description_as_markdown = models.BooleanField(verbose_name="As markdown", default=False)
-    cost = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Cost", default=Decimal(0))
+    cost = models.DecimalField(max_digits=8, decimal_places=2, verbose_name="Cost", default=0)
     cover = models.CharField(max_length=25, default="no_image.svg", verbose_name="Cover")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Created")
     updated = models.DateTimeField(auto_now=True, verbose_name="Edited")
