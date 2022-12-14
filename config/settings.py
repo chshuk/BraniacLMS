@@ -193,6 +193,7 @@ LOGGING = {
         },
     },
 }
+<<<<<<< HEAD
 
 CACHES = {
     "default": {
@@ -226,3 +227,5 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 # Email as files for debug
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = "var/email-messages/"
+=======
+>>>>>>> 381f57d (lesson_7 Logging)
